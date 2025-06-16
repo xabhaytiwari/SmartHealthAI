@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartHealthAI</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        textarea, button { width: 100%; padding: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>SmartHealthAI 🧠</h1>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.description.label }}<br>
+        {{ form.description(rows=5) }}<br>
+        {{ form.submit() }}
+    </form>
+
+    {% if result %}
+    <hr>
+    <h2>Disease: {{ result.disease }}</h2>
+    <h3>Precautions:</h3>
+    <ul>
+        {% for p in result.precautions %}
+        <li>{{ p }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
