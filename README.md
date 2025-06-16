@@ -23,5 +23,3 @@ An AI-powered personal health assistant that predicts diseases based on user-des
 * **Security**: `.env` for environment variables
 
 ---
-
-Let me know if you'd like me to generate the full README file or add deployment instructions (like using Gunicorn or Heroku).
