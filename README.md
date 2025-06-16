@@ -1,4 +1,3 @@
-Here’s an updated **README section** for your `SmartHealthAI` project reflecting the recent changes, including Flask-WTF form integration and secure `SECRET_KEY` handling:
 
 ---
 
