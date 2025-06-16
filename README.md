@@ -1,33 +1,28 @@
-## 🔌 Flask API for SmartHealthAI
+Here’s an updated **README section** for your `SmartHealthAI` project reflecting the recent changes, including Flask-WTF form integration and secure `SECRET_KEY` handling:
 
-The project includes a Flask API that takes a list of symptoms and returns the predicted disease along with suggested precautions.
+---
 
-### 🔁 Endpoint
+## 🧠 SmartHealthAI
 
-**POST** `/predict`
+An AI-powered personal health assistant that predicts diseases based on user-described symptoms and suggests appropriate precautions.
 
-#### 🔧 Input (JSON)
+### 🚀 Features
 
-```json
-{
-  "symptoms": ["itching", "skin_rash", "coughing_sneezing"]
-}
-```
+* **Natural Language Symptom Input**: Users can describe symptoms in their own words using a secure form powered by Flask-WTF.
+* **Transformer-Based Symptom Extraction**: Uses `facebook/bart-large-mnli` via Hugging Face Transformers to intelligently extract symptoms from user text (zero-shot classification).
+* **Disease Prediction**: Predicts the most probable disease using a trained ML model.
+* **Precaution Suggestion**: Returns top 3 precautions for the predicted condition.
+* **Secure Flask Setup**: Uses environment variables to manage secrets like `SECRET_KEY` (not hardcoded).
 
-#### Output(JSON)
+### 🛠️ Technologies Used
 
-```json
-{
-  "disease": "Fungal infection",
-  "precautions": [
-    "bath twice",
-    "use detol or neem in bathing water",
-    "keep infected area dry",
-    "use clean cloths"
-  ]
-}
-```
+* **Backend**: Python, Flask, Flask-WTF
+* **NLP**: Hugging Face Transformers (`facebook/bart-large-mnli`)
+* **ML**: scikit-learn (pickled model)
+* **Data Handling**: pandas
+* **Frontend**: HTML, CSS (basic)
+* **Security**: `.env` for environment variables
 
+---
 
-
-
+Let me know if you'd like me to generate the full README file or add deployment instructions (like using Gunicorn or Heroku).
