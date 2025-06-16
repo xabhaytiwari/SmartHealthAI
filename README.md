@@ -1,11 +1,11 @@
 
 ---
 
-## 🧠 SmartHealthAI
+## SmartHealthAI
 
 An AI-powered personal health assistant that predicts diseases based on user-described symptoms and suggests appropriate precautions.
 
-### 🚀 Features
+### Features
 
 * **Natural Language Symptom Input**: Users can describe symptoms in their own words using a secure form powered by Flask-WTF.
 * **Transformer-Based Symptom Extraction**: Uses `facebook/bart-large-mnli` via Hugging Face Transformers to intelligently extract symptoms from user text (zero-shot classification).
@@ -13,7 +13,7 @@ An AI-powered personal health assistant that predicts diseases based on user-des
 * **Precaution Suggestion**: Returns top 3 precautions for the predicted condition.
 * **Secure Flask Setup**: Uses environment variables to manage secrets like `SECRET_KEY` (not hardcoded).
 
-### 🛠️ Technologies Used
+### Technologies Used
 
 * **Backend**: Python, Flask, Flask-WTF
 * **NLP**: Hugging Face Transformers (`facebook/bart-large-mnli`)
